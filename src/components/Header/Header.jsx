@@ -1,52 +1,43 @@
 import { MdOutlineEmail } from "react-icons/md";
 import styles from "./Header.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
-export const Header = () => {
+import { Link } from "react-router-dom";
+export const Header = (id) => {
   return (
     <div className="container min-w-full ">
       <nav className={styles.nav}>
-        <div className="flex justify-items-center container content-center  min-w-full  ">
-          <div className="ml-24 absolute">
+        <div className="flex flex-nowrap md:flex justify-items-center  min-w-full  ">
+          <div className=" mx-4">
             <img
-              className="object-cover h-32 w-68"
+              className="object-contain h-32 w-68"
               src="https://logos-world.net/wp-content/uploads/2021/09/Jeep-Logo.png"
               alt="Jeep"
             />
           </div>
           <div className="relative flex justify-center container content-center my-12  mx-auto">
             <ul className="flex flex-row hidden lg:flex  font-bold  gap-20 mx-2 ">
-              <li>
-                <a href="" className="text-gray-200  hover:text-yellow-400">
+              <Link to={'/'} className="text-gray-200  hover:text-yellow-400"><li>
                   Home
-                </a>
-              </li>
-              <li>
-                <a href="" className="text-gray-200 hover:text-yellow-400">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="" className="text-gray-200 hover:text-yellow-400">
-                  Vehicles
-                </a>
-              </li>
-              <li>
-                <a href="" className="text-gray-200 hover:text-yellow-400">
+              </li></Link>
+              <Link to='/category/Drive' className="text-gray-200 hover:text-yellow-400">
+              <li className="">Drivers</li></Link>
+             <Link to={''} className="text-gray-200 hover:text-yellow-400">
+             <li>
                   Service
-                </a>
               </li>
+             </Link>
+              <Link to={''} className="text-gray-200 hover:text-yellow-400">
               <li>
-                <a href="" className="text-gray-200 hover:text-yellow-400">
                   Test Drive
-                </a>
               </li>
-              <li>
-                <a href="" className="text-gray-200 hover:text-yellow-400">
+              </Link>
+              <Link to={''} className="text-gray-200 hover:text-yellow-400">
+               <li>
                   Contact
-                </a>
               </li>
+              </Link>
             </ul>
-            <div className="absolute text-gray-200 flex flex-row-reverse space-x-4 space-x-reverse mx-6 py-2 right-2">
+            <div className="text-gray-200 flex absolute top-1 right-8  gap-5 ">
               <a href="">
                 <MdOutlineEmail />
               </a>
