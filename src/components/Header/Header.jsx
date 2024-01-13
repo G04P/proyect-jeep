@@ -2,7 +2,10 @@ import { MdOutlineEmail } from "react-icons/md";
 import styles from "./Header.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-export const Header = (id) => {
+import { useState } from "react";
+import {MenuHamburguesa} from '../menu/MenuHamburguesa'
+export const Header = () => {
+
   return (
     <div className="container min-w-full ">
       <nav className={styles.nav}>
@@ -14,7 +17,8 @@ export const Header = (id) => {
               alt="Jeep"
             />
           </div>
-          <div className="relative flex justify-center container content-center my-12  mx-auto">
+           
+          <section  className="relative flex justify-center container content-center my-12  mx-auto">
             <ul className="flex flex-row hidden lg:flex  font-bold  gap-20 mx-2 ">
               <Link to={'/'} className="text-gray-200  hover:text-yellow-400"><li>
                   Home
@@ -37,7 +41,7 @@ export const Header = (id) => {
               </li>
               </Link>
             </ul>
-            <div className="text-gray-200 flex absolute top-1 right-8  gap-5 ">
+            <div className="text-gray-200 flex absolute top-1 right-8 hidden gap-5 ">
               <a href="">
                 <MdOutlineEmail />
               </a>
@@ -45,7 +49,10 @@ export const Header = (id) => {
                 <FaPhoneAlt />
               </a>
             </div>
-          </div>
+            <div>
+            <MenuHamburguesa/>
+           </div>
+          </section>
         </div>
       </nav>
     </div>
