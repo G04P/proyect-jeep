@@ -1,0 +1,9 @@
+.parrafo {
+    position: absolute;
+    max-width: 80px;
+    background-color: black;
+    color: white;
+    opacity: 40%;
+    text-align: center;
+    margin-top: 28px;
+}

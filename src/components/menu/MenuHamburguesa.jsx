@@ -1,4 +1,5 @@
  import { useState } from "react";
+ import { Link } from "react-router-dom";
  import styles from './MenuHamburguesa.module.css'
 
 export const MenuHamburguesa = () => { 
@@ -36,20 +37,31 @@ export const MenuHamburguesa = () => {
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-w-80 min-h-[250px]">
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/about">About</a>
+            <Link to={'/'} className=" hover:text-yellow-500 text-gray-500 underline font-semibold"><li>
+                  Home
+              </li></Link>
+              <Link to='/category/Drive' className="hover:text-yellow-500 text-gray-500 underline font-semibold ">
+              <li className="">Drivers</li></Link>
+             <Link to={'/Service/Service'} className="hover:text-yellow-500 text-gray-500 underline font-semibold">
+             <li>
+                  Service
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/portfolio">Portfolio</a>
+             </Link>
+              <Link to={''} className="hover:text-yellow-500 text-gray-500 underline font-semibold">
+              <li>
+                  Test Drive
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/contact">Contact</a>
+              </Link>
+              <Link to={''} className="hover:text-yellow-500 text-gray-500 underline font-semibold">
+               <li>
+                  Contact
               </li>
+              </Link>
             </ul>
           </div>
         </section>
 
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+        {/* <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
           <li>
             <a href="/about">About</a>
           </li>
@@ -59,7 +71,7 @@ export const MenuHamburguesa = () => {
           <li>
             <a href="/contact">Contact</a>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </div>
   );

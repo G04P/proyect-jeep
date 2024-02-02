@@ -2,7 +2,6 @@ import { MdOutlineEmail } from "react-icons/md";
 import styles from "./Header.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import {MenuHamburguesa} from '../menu/MenuHamburguesa'
 export const Header = () => {
 
@@ -10,12 +9,15 @@ export const Header = () => {
     <div className="container min-w-full ">
       <nav className={styles.nav}>
         <div className="flex flex-nowrap md:flex justify-items-center  min-w-full  ">
-          <div className=" mx-4">
-            <img
-              className="object-contain h-32 w-68"
+          <div className="mx-6">
+            <Link to={"/"}>
+             <img
+              className="object-contain p-2 ml-6 h-32 w-68"
               src="https://logos-world.net/wp-content/uploads/2021/09/Jeep-Logo.png"
               alt="Jeep"
             />
+            </Link>
+           
           </div>
            
           <section  className="relative flex justify-center container content-center my-12  mx-auto">
@@ -25,7 +27,7 @@ export const Header = () => {
               </li></Link>
               <Link to='/category/Drive' className="text-gray-200 hover:text-yellow-400">
               <li className="">Drivers</li></Link>
-             <Link to={''} className="text-gray-200 hover:text-yellow-400">
+             <Link to={'/service/service'} className="text-gray-200 hover:text-yellow-400">
              <li>
                   Service
               </li>

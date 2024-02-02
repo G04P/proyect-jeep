@@ -1,15 +1,16 @@
-import { Header } from "./components/Header/Header";
-import { Compass, Footer } from "./components";
+import { Compass, Footer ,Header ,DriversContainer} from "./components";
+import { Service } from "./components/pageService/Service";
+import {Mantenimiento} from './components/pageService/Mantenimiento';
 import {BrowserRouter , Route,  Routes} from 'react-router-dom';
-import { DriversContainer } from "./components/Drivers/DriversContainer";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/category/:category" element={<DriversContainer/>}/> 
         <Route path="/" element={<Compass />}/> 
+        <Route path="/Service/Service" element={<Service />}/> 
+        <Route path="/Service/Mantenimiento" element={<Mantenimiento />}/> 
       </Routes> 
       <Footer />
     </BrowserRouter>
